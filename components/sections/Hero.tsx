@@ -48,7 +48,7 @@ export default function Hero() {
             <Button 
               size="lg" 
               variant="outline"
-              className="w-full sm:w-auto border-white text-white hover:bg-white hover:text-primary-600 text-lg px-8 py-4 h-auto font-semibold"
+              className="w-full sm:w-auto border-white text-primary-600 hover:bg-white hover:text-primary-600 text-lg px-8 py-4 h-auto font-semibold"
               asChild
             >
               <Link href="/facilities" className="flex items-center">
