@@ -66,16 +66,15 @@ export default function ClinicianApplication() {
   }
 
   const specialties = [
-    'Registered Nurse (RN)',
-    'Licensed Practical Nurse (LPN)',
-    'Certified Nursing Assistant (CNA)',
-    'Physical Therapist',
-    'Occupational Therapist',
-    'Speech Language Pathologist',
-    'Respiratory Therapist',
-    'Medical Technologist',
-    'Radiology Technician',
-    'Pharmacy Technician',
+    'Board Certified Behavior Analyst (BCBA)',
+    'Board Certified Assistant Behavior Analyst (BCaBA)',
+    'Registered Behavior Technician (RBT)',
+    'Behavior Technician',
+    'Behavior Therapist',
+    'Behavior Interventionist',
+    'Clinical Supervisor',
+    'Program Director',
+    'Administrative Support',
     'Other'
   ]
 
@@ -88,11 +87,12 @@ export default function ClinicianApplication() {
     'More than 15 years'
   ]
 
-  const shiftOptions = [
-    { value: 'day', label: 'Day Shift (7am-7pm)' },
-    { value: 'night', label: 'Night Shift (7pm-7am)' },
-    { value: 'weekend', label: 'Weekend Shifts' },
-    { value: 'prn', label: 'PRN/Per Diem' }
+  const workSettingOptions = [
+    { value: 'clinic', label: 'Clinic-Based' },
+    { value: 'home', label: 'Home-Based/In-Home' },
+    { value: 'school', label: 'School-Based' },
+    { value: 'telehealth', label: 'Telehealth' },
+    { value: 'flexible', label: 'Flexible/Multiple Settings' }
   ]
 
   return (
@@ -119,10 +119,10 @@ export default function ClinicianApplication() {
                 <Users className="w-8 h-8 text-primary-600" />
               </div>
               <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Apply as a Healthcare Professional
+                Apply for ABA Opportunities
               </h1>
               <p className="text-xl text-gray-600">
-                Join thousands of professionals who have found flexibility and better opportunities with AllStaff Health
+                Find a Career That Fits Your Life—Not Just Your License. Join our network of BCBAs, RBTs, and behavioral health professionals.
               </p>
             </div>
 
@@ -266,18 +266,18 @@ export default function ClinicianApplication() {
                     </div>
                   </div>
 
-                  {/* Shift Preferences */}
+                  {/* Work Setting Preferences */}
                   <div className="space-y-4">
-                    <h3 className="text-lg font-semibold text-gray-900">Shift Preferences *</h3>
+                    <h3 className="text-lg font-semibold text-gray-900">Work Setting Preferences *</h3>
                     <p className="text-sm text-gray-600">Select all that apply</p>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {shiftOptions.map((option) => (
+                      {workSettingOptions.map((option) => (
                         <div key={option.value} className="flex items-center space-x-2">
                           <Checkbox
                             id={option.value}
                             checked={watchedShiftPreferences.includes(option.value)}
-                            onCheckedChange={(checked) => 
+                            onCheckedChange={(checked) =>
                               handleShiftPreferenceChange(option.value, checked as boolean)
                             }
                           />
@@ -318,7 +318,7 @@ export default function ClinicianApplication() {
                         className={errors.consent ? 'border-red-500' : ''}
                       />
                       <Label htmlFor="consent" className="text-sm leading-relaxed">
-                        I agree to AllStaff Health's{' '}
+                        I agree to Polaris Pathways Behavioral Talent's{' '}
                         <Link href="/terms" className="text-primary-600 hover:underline">
                           Terms of Service
                         </Link>{' '}

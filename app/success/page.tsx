@@ -21,15 +21,15 @@ function SuccessContent() {
       return {
         icon: Users,
         title: 'Application Submitted Successfully!',
-        description: 'Thank you for applying with AllStaff Health. We\'ve received your application and will review it shortly.',
+        description: 'Thank you for applying with Polaris Pathways. We\'ve received your application and will guide you through the next steps of your ABA career journey.',
         nextSteps: [
-          'Our recruitment team will review your application within 24-48 hours',
-          'You\'ll receive an email with next steps and any additional requirements',
-          'Complete any necessary credentialing or verification processes',
-          'Start browsing and applying to opportunities that match your preferences'
+          'Our team will review your application and career goals within 24-48 hours',
+          'You\'ll receive an email with next steps and career alignment discussion',
+          'We\'ll match you with opportunities that fit your values, lifestyle, and growth goals',
+          'Begin your pathway to a career where you can grow, stay, and thrive'
         ],
         cta: {
-          primary: { text: 'View Job Opportunities', href: '#', icon: ArrowRight },
+          primary: { text: 'View ABA Opportunities', href: '#', icon: ArrowRight },
           secondary: { text: 'Return Home', href: '/', icon: Home }
         }
       }
@@ -37,12 +37,12 @@ function SuccessContent() {
       return {
         icon: Building2,
         title: 'Staffing Request Received!',
-        description: 'Thank you for choosing AllStaff Health. We\'ve received your staffing request and will connect you with qualified professionals.',
+        description: 'Thank you for choosing Polaris Pathways. We\'ve received your staffing request and will connect you with clinically aligned ABA professionals.',
         nextSteps: [
-          'Our account management team will contact you within 2-4 hours during business hours',
-          'We\'ll discuss your specific requirements and timeline in detail',
-          'Receive profiles of pre-screened, qualified healthcare professionals',
-          'Interview and select the best candidates for your facility'
+          'Our team will contact you within 2-4 hours during business hours',
+          'We\'ll discuss your clinic culture, values, and specific staffing needs',
+          'Receive profiles of clinically vetted, culture-fit BCBAs and RBTs',
+          'Build a stable team focused on better outcomes'
         ],
         cta: {
           primary: { text: 'Submit Another Request', href: '/facilities', icon: Building2 },
@@ -109,19 +109,13 @@ function SuccessContent() {
                 <div className="bg-gray-50 rounded-lg p-6">
                   <h4 className="font-semibold text-gray-900 mb-2">Need immediate assistance?</h4>
                   <p className="text-gray-600 mb-4">
-                    Our support team is available 24/7 to help with any questions.
+                    Our team is here to guide you through the next steps.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 text-sm">
                     <div>
                       <span className="font-medium text-gray-900">Email:</span>{' '}
-                      <a href="mailto:support@allstaffhealth.com" className="text-primary-600 hover:underline">
-                        support@allstaffhealth.com
-                      </a>
-                    </div>
-                    <div>
-                      <span className="font-medium text-gray-900">Phone:</span>{' '}
-                      <a href="tel:+1-800-555-0123" className="text-primary-600 hover:underline">
-                        (800) 555-0123
+                      <a href="mailto:hello@polarispathways.com" className="text-primary-600 hover:underline">
+                        hello@polarispathways.com
                       </a>
                     </div>
                   </div>

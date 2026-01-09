@@ -65,11 +65,11 @@ export default function FacilityRequest() {
   ]
 
   const shiftTypes = [
-    'Day Shift (7am-7pm)',
-    'Night Shift (7pm-7am)',
-    'Rotating Shifts',
-    'Weekend Coverage',
-    'PRN/Per Diem'
+    'Clinic-Based',
+    'Home-Based/In-Home',
+    'School-Based',
+    'Telehealth',
+    'Flexible/Multiple Settings'
   ]
 
   return (
@@ -96,10 +96,10 @@ export default function FacilityRequest() {
                 <Building2 className="w-8 h-8 text-accent-600" />
               </div>
               <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Request Healthcare Staff
+                Request ABA Talent
               </h1>
               <p className="text-xl text-gray-600">
-                Connect with qualified healthcare professionals to meet your facility's staffing needs
+                Build a Team That Stays. Serve Families with Confidence. Connect with clinically vetted BCBAs, RBTs, and behavioral health professionals.
               </p>
             </div>
 
@@ -207,7 +207,7 @@ export default function FacilityRequest() {
                         <Label htmlFor="roleNeeded">Role Needed *</Label>
                         <Input
                           id="roleNeeded"
-                          placeholder="e.g., Registered Nurse, Physical Therapist"
+                          placeholder="e.g., BCBA, RBT, Behavior Technician"
                           {...register('roleNeeded')}
                           className={errors.roleNeeded ? 'border-red-500' : ''}
                         />
@@ -233,10 +233,10 @@ export default function FacilityRequest() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="shiftType">Shift Type *</Label>
+                        <Label htmlFor="shiftType">Work Setting *</Label>
                         <Select onValueChange={(value) => setValue('shiftType', value)}>
                           <SelectTrigger className={errors.shiftType ? 'border-red-500' : ''}>
-                            <SelectValue placeholder="Select shift type" />
+                            <SelectValue placeholder="Select work setting" />
                           </SelectTrigger>
                           <SelectContent>
                             {shiftTypes.map((shift) => (
@@ -320,7 +320,7 @@ export default function FacilityRequest() {
                         className={errors.consent ? 'border-red-500' : ''}
                       />
                       <Label htmlFor="consent" className="text-sm leading-relaxed">
-                        I agree to AllStaff Health's{' '}
+                        I agree to Polaris Pathways Behavioral Talent's{' '}
                         <Link href="/terms" className="text-primary-600 hover:underline">
                           Terms of Service
                         </Link>{' '}

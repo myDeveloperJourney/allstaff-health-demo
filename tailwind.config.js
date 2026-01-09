@@ -23,6 +23,26 @@ module.exports = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        // Navy palette (primary brand color)
+        navy: {
+          900: '#0f172a',
+          800: '#1a2e44',
+          700: '#1e3a5f',
+          600: '#234b6e',
+          500: '#2d5a80',
+        },
+        // Teal accent
+        teal: {
+          700: '#0e4d5c',
+          600: '#0d7377',
+          500: '#14919b',
+        },
+        // Orange accent (primary action color - like recruitaba.com)
+        orange: {
+          600: '#ea580c',
+          500: '#f97316',
+          400: '#fb923c',
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -47,6 +67,7 @@ module.exports = {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
+          400: "#22d3ee",
           500: "#06b6d4",
           600: "#0891b2",
         },

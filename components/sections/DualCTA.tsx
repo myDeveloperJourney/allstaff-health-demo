@@ -1,50 +1,104 @@
 import Link from 'next/link'
-import { Button } from '@/components/ui/button'
-import { ArrowRight, Users, Building2 } from 'lucide-react'
+import { Building2, Users, CheckCircle } from 'lucide-react'
 
 export default function DualCTA() {
+  const clinicBenefits = [
+    'Clinically guided vetting',
+    'Culture-fit placements',
+    'Faster hiring without sacrificing quality',
+    'Lower turnover and burnout',
+    'Scalable recruiting support'
+  ]
+
+  const clinicianBenefits = [
+    'Ethical, career-aligned placements',
+    'Caseload and environment matching',
+    'Growth-focused opportunities',
+    'Support beyond the offer letter',
+    'Respect for the emotional weight of your work'
+  ]
+
   return (
-    <section className="section-padding">
+    <section className="py-20 hero-gradient">
       <div className="container-custom">
-        <div className="bg-gradient-to-r from-primary-600 to-accent-600 rounded-3xl p-8 md:p-12 lg:p-16 text-white text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Ready to Get Started?
+        {/* Title with dotted accent */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+            Connect with Us
           </h2>
-          <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto">
-            Join thousands of healthcare professionals and facilities who trust AllStaff Health
-          </p>
-          
-          <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
-            <Button 
-              size="lg" 
-              className="w-full md:w-auto bg-white text-primary-600 hover:bg-gray-100 text-lg px-8 py-4 h-auto font-semibold"
-              asChild
-            >
-              <Link href="/clinicians" className="flex items-center">
-                <Users className="w-5 h-5 mr-2" />
-                Apply as Clinician
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-            </Button>
-            
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="w-full md:w-auto border-white text-primary-600 hover:bg-white hover:text-primary-600 text-lg px-8 py-4 h-auto font-semibold"
-              asChild
-            >
-              <Link href="/facilities" className="flex items-center">
-                <Building2 className="w-5 h-5 mr-2" />
-                Request Staff
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-            </Button>
+          {/* Orange dotted accent */}
+          <div className="flex items-center justify-center gap-1 mt-3">
+            <div className="w-1.5 h-1.5 rounded-full bg-orange-500" />
+            <div className="w-1.5 h-1.5 rounded-full bg-orange-500" />
+            <div className="w-1.5 h-1.5 rounded-full bg-orange-500" />
+            <div className="w-8 h-0.5 bg-orange-500 ml-1" />
           </div>
-          
-          <div className="mt-8 text-white/80">
-            <p className="text-sm">
-              Quick setup • No hidden fees • 24/7 support
+        </div>
+
+        {/* Two Column Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {/* For Clinics Column */}
+          <div className="bg-white rounded-lg p-8 shadow-lg">
+            <div className="flex items-center gap-3 mb-4">
+              <Building2 className="w-8 h-8 text-orange-500" />
+              <h3 className="text-2xl font-bold text-gray-900">For ABA Clinics</h3>
+            </div>
+
+            <h4 className="text-xl font-semibold text-gray-800 mb-4">
+              Build a Team That Stays. Serve Families with Confidence.
+            </h4>
+
+            <p className="text-gray-600 mb-6 leading-relaxed">
+              Polaris Pathways partners with ABA providers to deliver clinically vetted BCBAs and RBTs who align with your mission, your culture, and your standards. We focus on sustainable growth not just filling shifts so your organization can serve families with consistency and confidence.
             </p>
+
+            <ul className="space-y-3 mb-8">
+              {clinicBenefits.map((benefit, index) => (
+                <li key={index} className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">{benefit}</span>
+                </li>
+              ))}
+            </ul>
+
+            <Link
+              href="/facilities"
+              className="inline-block bg-orange-500 text-white px-8 py-4 rounded-full font-semibold uppercase tracking-wide hover:bg-orange-600 transition-colors text-sm text-center w-full sm:w-auto"
+            >
+              Request ABA Talent
+            </Link>
+          </div>
+
+          {/* For Clinicians Column - Glass Card */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-white/20">
+            <div className="flex items-center gap-3 mb-4">
+              <Users className="w-8 h-8 text-orange-500" />
+              <h3 className="text-2xl font-bold text-white">For ABA Professionals</h3>
+            </div>
+
+            <h4 className="text-xl font-semibold text-white mb-4">
+              Find a Career That Fits Your Life Not Just Your License.
+            </h4>
+
+            <p className="text-white/80 mb-6 leading-relaxed">
+              Your career deserves intention, not urgency. Polaris Pathways helps BCBAs and RBTs find roles aligned with their values, lifestyles, and long-term goals. We advocate for you, guide your next move, and help you grow without burning out.
+            </p>
+
+            <ul className="space-y-3 mb-8">
+              {clinicianBenefits.map((benefit, index) => (
+                <li key={index} className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-white/90">{benefit}</span>
+                </li>
+              ))}
+            </ul>
+
+            <Link
+              href="/clinicians"
+              className="inline-block bg-orange-500 text-white px-8 py-4 rounded-full font-semibold uppercase tracking-wide hover:bg-orange-600 transition-colors text-sm text-center w-full sm:w-auto"
+            >
+              Apply for ABA Opportunities
+            </Link>
           </div>
         </div>
       </div>

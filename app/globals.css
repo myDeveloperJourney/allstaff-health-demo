@@ -62,21 +62,98 @@
 }
 
 @layer components {
+  /* Polaris Pathways brand gradient - Dark navy → Teal */
   .hero-gradient {
-    background: linear-gradient(135deg, #1e40af 0%, #0891b2 100%);
+    background: linear-gradient(135deg, #1a2e44 0%, #0e4d5c 50%, #1a3a4a 100%);
   }
-  
+
   .glass-effect {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
-  
+
   .section-padding {
     @apply py-16 md:py-20 lg:py-24;
   }
-  
+
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Navy brand colors */
+  .bg-navy-900 { background-color: #0f172a; }
+  .bg-navy-800 { background-color: #1a2e44; }
+  .bg-navy-700 { background-color: #1e3a5f; }
+  .bg-navy-600 { background-color: #234b6e; }
+  .bg-navy-500 { background-color: #2d5a80; }
+
+  .text-navy-900 { color: #0f172a; }
+  .text-navy-800 { color: #1a2e44; }
+  .text-navy-700 { color: #1e3a5f; }
+  .text-navy-600 { color: #234b6e; }
+  .text-navy-500 { color: #2d5a80; }
+
+  /* Legacy primary colors for compatibility */
+  .bg-primary-900 { background-color: #0f172a; }
+  .bg-primary-800 { background-color: #1e3a5f; }
+  .bg-primary-700 { background-color: #1e40af; }
+  .bg-primary-600 { background-color: #2563eb; }
+  .bg-primary-500 { background-color: #3b82f6; }
+
+  .bg-accent-700 { background-color: #0e7490; }
+  .bg-accent-600 { background-color: #0891b2; }
+  .bg-accent-500 { background-color: #06b6d4; }
+  .bg-accent-400 { background-color: #22d3ee; }
+
+  .text-primary-900 { color: #0f172a; }
+  .text-primary-800 { color: #1e3a5f; }
+  .text-primary-700 { color: #1e40af; }
+  .text-primary-600 { color: #2563eb; }
+  .text-primary-500 { color: #3b82f6; }
+
+  .text-accent-700 { color: #0e7490; }
+  .text-accent-600 { color: #0891b2; }
+  .text-accent-500 { color: #06b6d4; }
+  .text-accent-400 { color: #22d3ee; }
+
+  /* Section label with orange accent line (recruitaba.com style) */
+  .section-label {
+    @apply flex items-center gap-3 text-gray-600 text-sm font-medium mb-4;
+  }
+
+  .section-label::before {
+    content: '';
+    @apply w-10 h-0.5 bg-orange-500;
+  }
+
+  /* Orange dotted title accent (for dark sections) */
+  .title-accent {
+    @apply flex items-center justify-center gap-1 mt-3;
+  }
+
+  .title-accent .dot {
+    @apply w-1.5 h-1.5 rounded-full bg-orange-500;
+  }
+
+  .title-accent .line {
+    @apply w-8 h-0.5 bg-orange-500;
+  }
+
+  /* Pill-shaped button styles (recruitaba.com style) */
+  .btn-orange {
+    @apply bg-orange-500 text-white px-8 py-4 rounded-full font-semibold uppercase tracking-wide hover:bg-orange-600 transition-colors;
+  }
+
+  .btn-white {
+    @apply bg-white text-orange-500 px-8 py-4 rounded-full font-semibold uppercase tracking-wide hover:bg-gray-100 transition-colors;
+  }
+
+  .btn-outline-light {
+    @apply bg-transparent border-2 border-white/50 text-white px-8 py-4 rounded-full font-semibold uppercase tracking-wide hover:bg-white/10 transition-colors;
+  }
+
+  .btn-navy {
+    @apply bg-white text-navy-800 px-8 py-4 rounded-full font-semibold uppercase tracking-wide hover:bg-gray-100 transition-colors;
   }
 }

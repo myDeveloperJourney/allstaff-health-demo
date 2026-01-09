@@ -1,89 +1,74 @@
 import Link from 'next/link'
-import { Button } from '@/components/ui/button'
-import { ArrowRight, Users, Building2 } from 'lucide-react'
+import Image from 'next/image'
 
 export default function Hero() {
   return (
-    <section className="relative pt-20 pb-16 md:pt-28 md:pb-20 lg:pt-32 lg:pb-24 overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 hero-gradient opacity-90"></div>
-      <div className="absolute inset-0 bg-black/20"></div>
-      
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image - Dusk Sky with Stars */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/hero-dusk-sky.jpg"
+          alt="Dusk sky with stars - Your North Star"
+          fill
+          priority
+          className="object-cover object-center"
+          quality={90}
+        />
+        {/* Gradient Overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-navy-800/85 via-navy-800/60 to-navy-800/80" />
+      </div>
+
       {/* Content */}
-      <div className="relative container-custom">
-        <div className="max-w-4xl mx-auto text-center text-white">
-          {/* Trust indicator */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-medium mb-6">
-            <Users className="w-4 h-4 mr-2" />
-            Trusted by 500+ healthcare facilities nationwide
+      <div className="relative z-10 container-custom pt-20 pb-16 text-center">
+        <div className="max-w-4xl mx-auto">
+          {/* Orange accent line + subheadline */}
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="w-10 h-0.5 bg-orange-500" />
+            <span className="text-white/90 text-sm md:text-base font-medium tracking-wide">
+              Guiding ABA Careers Forward
+            </span>
           </div>
-          
-          {/* Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-            Connect Healthcare
+
+          {/* Main Headline - Italic style */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-8 leading-tight">
+            <span className="italic">Your North Star for</span>
             <br />
-            <span className="text-accent-400">Professionals & Facilities</span>
+            <span className="italic">Pathways to Better Outcomes</span>
           </h1>
-          
-          {/* Subheading */}
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Find your next opportunity or request skilled staff. 
-            Join thousands of healthcare professionals who trust AllStaff Health.
+
+          {/* Subheadline */}
+          <p className="text-lg md:text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
+            Polaris Pathways Behavioral Talent helps ABA clinics build stable, clinically aligned teams—and helps BCBAs and RBTs find careers where they can grow, stay, and thrive.
           </p>
-          
-          {/* Dual CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button 
-              size="lg" 
-              className="w-full sm:w-auto bg-white text-primary-600 hover:bg-gray-100 text-lg px-8 py-4 h-auto font-semibold"
-              asChild
+
+          {/* Dual CTAs - Pill shaped */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+            <Link
+              href="/facilities"
+              className="w-full sm:w-auto bg-orange-500 text-white px-10 py-4 rounded-full font-semibold uppercase tracking-widest hover:bg-orange-600 transition-colors text-sm"
             >
-              <Link href="/clinicians" className="flex items-center">
-                <Users className="w-5 h-5 mr-2" />
-                Apply as Clinician
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-            </Button>
-            
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="w-full sm:w-auto border-white text-primary-600 hover:bg-white hover:text-primary-600 text-lg px-8 py-4 h-auto font-semibold"
-              asChild
+              Hire ABA Talent
+            </Link>
+            <Link
+              href="/clinicians"
+              className="w-full sm:w-auto bg-white text-orange-500 px-10 py-4 rounded-full font-semibold uppercase tracking-widest hover:bg-gray-100 transition-colors text-sm"
             >
-              <Link href="/facilities" className="flex items-center">
-                <Building2 className="w-5 h-5 mr-2" />
-                Request Staff
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-            </Button>
+              Find ABA Jobs
+            </Link>
           </div>
-          
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold mb-1">10K+</div>
-              <div className="text-sm text-white/80">Active Professionals</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold mb-1">500+</div>
-              <div className="text-sm text-white/80">Partner Facilities</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold mb-1">24/7</div>
-              <div className="text-sm text-white/80">Support</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold mb-1">50</div>
-              <div className="text-sm text-white/80">States Covered</div>
-            </div>
-          </div>
+
+          {/* Book a Call CTA */}
+          <Link
+            href="#contact"
+            className="inline-block bg-transparent border-2 border-white/40 text-white px-10 py-4 rounded-full font-semibold uppercase tracking-widest hover:bg-white/10 transition-colors text-sm"
+          >
+            Book a Call
+          </Link>
         </div>
       </div>
-      
-      {/* Decorative elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>
-      <div className="absolute bottom-20 right-10 w-32 h-32 bg-white/5 rounded-full blur-2xl"></div>
+
+      {/* Decorative gradient to next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-10" />
     </section>
   )
 }

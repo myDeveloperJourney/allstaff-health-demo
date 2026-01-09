@@ -24,27 +24,27 @@ export default function TermsOfServicePage() {
                 <section className="mb-8">
                   <h2 className="text-xl font-semibold text-gray-900 mb-4">Acceptance of Terms</h2>
                   <p className="text-gray-700 mb-4">
-                    By accessing and using AllStaff Health's platform, you accept and agree to be bound by the terms and provision of this agreement. These Terms of Service govern your use of our healthcare staffing services.
+                    By accessing and using Polaris Pathways Behavioral Talent's platform, you accept and agree to be bound by the terms and provision of this agreement. These Terms of Service govern your use of our ABA staffing services.
                   </p>
                 </section>
 
                 <section className="mb-8">
                   <h2 className="text-xl font-semibold text-gray-900 mb-4">Services Provided</h2>
                   <p className="text-gray-700 mb-4">
-                    AllStaff Health provides a platform that connects healthcare professionals with healthcare facilities for staffing purposes. Our services include:
+                    Polaris Pathways Behavioral Talent provides a platform that connects ABA professionals with behavioral health organizations for staffing purposes. Our services include:
                   </p>
                   <ul className="list-disc list-inside text-gray-700 space-y-2">
-                    <li>Matching qualified healthcare professionals with appropriate opportunities</li>
-                    <li>Credential verification and background screening</li>
-                    <li>Placement coordination and ongoing support</li>
-                    <li>Compliance monitoring and reporting</li>
+                    <li>Matching qualified BCBAs, RBTs, and behavioral health professionals with appropriate opportunities</li>
+                    <li>Clinical-first vetting and credential verification</li>
+                    <li>Culture-fit placements with ongoing support</li>
+                    <li>Career guidance and retention focus</li>
                   </ul>
                 </section>
 
                 <section className="mb-8">
                   <h2 className="text-xl font-semibold text-gray-900 mb-4">User Responsibilities</h2>
                   
-                  <h3 className="text-lg font-semibold text-gray-800 mb-3">Healthcare Professionals</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-3">ABA Professionals</h3>
                   <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
                     <li>Provide accurate and current professional information</li>
                     <li>Maintain valid licenses and certifications</li>
@@ -113,7 +113,7 @@ export default function TermsOfServicePage() {
                 <section className="mb-8">
                   <h2 className="text-xl font-semibold text-gray-900 mb-4">Limitation of Liability</h2>
                   <p className="text-gray-700 mb-4">
-                    AllStaff Health provides staffing services and platform access but does not control the actual provision of healthcare services. Our liability is limited to the scope of our staffing and placement services.
+                    Polaris Pathways Behavioral Talent provides staffing services and platform access but does not control the actual provision of ABA therapy services. Our liability is limited to the scope of our staffing and placement services.
                   </p>
                 </section>
 
