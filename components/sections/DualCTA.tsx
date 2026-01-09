@@ -37,6 +37,37 @@ export default function DualCTA() {
 
         {/* Two Column Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+           {/* For Clinicians Column - Glass Card */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-white/20">
+            <div className="flex items-center gap-3 mb-4">
+              <Users className="w-8 h-8 text-orange-500" />
+              <h3 className="text-2xl font-bold text-white">For ABA Professionals</h3>
+            </div>
+
+            <h4 className="text-xl font-semibold text-white mb-4">
+              Find a Career That Fits Your Life Not Just Your License.
+            </h4>
+
+            <p className="text-white/80 mb-6 leading-relaxed">
+              Your career deserves intention, not urgency. Polaris Pathways helps BCBAs and RBTs find roles aligned with their values, lifestyles, and long-term goals. We advocate for you, guide your next move, and help you grow without burning out.
+            </p>
+
+            <ul className="space-y-3 mb-8">
+              {clinicianBenefits.map((benefit, index) => (
+                <li key={index} className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-white/90">{benefit}</span>
+                </li>
+              ))}
+            </ul>
+
+            <Link
+              href="/clinicians"
+              className="inline-block bg-orange-500 text-white px-8 py-4 rounded-full font-semibold uppercase tracking-wide hover:bg-orange-600 transition-colors text-sm text-center w-full sm:w-auto"
+            >
+              Apply for ABA Opportunities
+            </Link>
+          </div>
           {/* For Clinics Column */}
           <div className="bg-white rounded-lg p-8 shadow-lg">
             <div className="flex items-center gap-3 mb-4">
@@ -66,38 +97,6 @@ export default function DualCTA() {
               className="inline-block bg-orange-500 text-white px-8 py-4 rounded-full font-semibold uppercase tracking-wide hover:bg-orange-600 transition-colors text-sm text-center w-full sm:w-auto"
             >
               Request ABA Talent
-            </Link>
-          </div>
-
-          {/* For Clinicians Column - Glass Card */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-white/20">
-            <div className="flex items-center gap-3 mb-4">
-              <Users className="w-8 h-8 text-orange-500" />
-              <h3 className="text-2xl font-bold text-white">For ABA Professionals</h3>
-            </div>
-
-            <h4 className="text-xl font-semibold text-white mb-4">
-              Find a Career That Fits Your Life Not Just Your License.
-            </h4>
-
-            <p className="text-white/80 mb-6 leading-relaxed">
-              Your career deserves intention, not urgency. Polaris Pathways helps BCBAs and RBTs find roles aligned with their values, lifestyles, and long-term goals. We advocate for you, guide your next move, and help you grow without burning out.
-            </p>
-
-            <ul className="space-y-3 mb-8">
-              {clinicianBenefits.map((benefit, index) => (
-                <li key={index} className="flex items-start gap-2">
-                  <CheckCircle className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-white/90">{benefit}</span>
-                </li>
-              ))}
-            </ul>
-
-            <Link
-              href="/clinicians"
-              className="inline-block bg-orange-500 text-white px-8 py-4 rounded-full font-semibold uppercase tracking-wide hover:bg-orange-600 transition-colors text-sm text-center w-full sm:w-auto"
-            >
-              Apply for ABA Opportunities
             </Link>
           </div>
         </div>
