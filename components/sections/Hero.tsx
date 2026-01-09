@@ -38,7 +38,7 @@ export default function Hero() {
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Polaris Pathways Behavioral Talent helps ABA clinics build stable, clinically aligned teams—and helps BCBAs and RBTs find careers where they can grow, stay, and thrive.
+            Polaris Pathways Behavioral Talent helps ABA clinics build stable, clinically aligned teams and helps BCBAs and RBTs find careers where they can grow, stay, and thrive.
           </p>
 
           {/* Dual CTAs - Pill shaped */}
